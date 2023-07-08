@@ -1,0 +1,13 @@
+@use 'var';
+.links {
+
+    padding-bottom: 0.6rem;
+    border-bottom: 0.125rem solid var.$accent-color;
+
+    font-weight: 700;
+    line-height: 1.625rem;
+    letter-spacing: 0.14288rem;
+    @media only screen and (min-width: 1152px) {
+        font-size: 2rem;
+    }
+}

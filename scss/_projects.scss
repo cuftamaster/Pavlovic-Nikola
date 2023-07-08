@@ -1,0 +1,135 @@
+@use 'var';
+
+.projects {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .wraper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1150px) {
+            justify-content: space-evenly;
+            gap:2rem
+        }
+
+        .project-title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            @media only screen and (max-width: 400px) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 4.3rem;
+            display: flex;
+            flex-direction: column;
+            @media only screen and (max-width: 1150px) {
+                margin-bottom: 3rem;
+            }
+            @media only screen and (max-width: 400px) {
+                margin-bottom: 2rem;
+            }
+
+            .img-state {
+                display: flex;
+                max-width: 34.11306rem;
+                max-height: 25rem;
+                box-sizing: border-box;
+                position: relative;
+                z-index: 3;
+                margin-bottom: 1.25rem;
+
+                @media only screen and (max-width: 1150px) {
+                    width: 21.5625rem;
+                    height: 15.8125rem;
+                }
+
+
+                &::after {
+                    content: "";
+                    box-sizing: border-box;
+                    background-color: var.$primary-background-color ;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: 5;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    transition: opacity 250ms ease-in;
+
+                    @media only screen and (max-width: 1150px) {
+                        display: none;
+                    }
+                }
+            }
+
+            &:hover .img-state::after {
+                opacity: 0.5;
+            }
+
+            &:hover .links-state {
+                opacity: 1;
+            }
+
+            .links-state {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2.4rem;
+                position: absolute;
+                z-index: 7;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, calc(-50% - 3rem), );
+                opacity: 0%;
+                transition: opacity 250ms ease-in;
+
+                @media only screen and (max-width: 1150px) {
+                    margin-top: 1.25rem;
+                    position: relative;
+                    flex-direction: row;
+                    gap: 2rem;
+                    opacity: 1;
+                    top: auto;
+                    left: auto;
+                    transform: none;
+
+                }
+            }
+
+            .portfolio-img {
+                max-width: 34.11306rem;
+                max-height: 25rem;
+
+                @media only screen and (max-width: 1150px) {
+                    width: 21.5625rem;
+                    height: 15.8125rem;
+                }
+
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 2rem;
+                margin-bottom: 0.44rem;
+            }
+
+            span {
+                margin-right: 1.12rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

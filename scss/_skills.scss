@@ -1,0 +1,39 @@
+@use 'var';
+
+.skills {
+    margin-bottom: 5.15rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media only screen and (max-width: 1150px) {
+        margin-bottom: 2.5rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        margin-bottom: 2rem;
+    }
+
+    .wraper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media only screen and (max-width: 500px) {
+            border-bottom: 0.125rem solid var.$primary-text-color;
+        }
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+            flex-basis: 33%;
+            // max-width: 33%;
+            min-width: 218px;
+            padding-bottom: 3.6rem;
+
+            @media only screen and (max-width: 500px) {
+                align-items: center;
+
+            }
+        }
+    }
+}

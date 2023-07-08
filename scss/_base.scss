@@ -1,0 +1,69 @@
+@use 'var';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'space grotesk', sans-serif;
+
+    background-color: var.$primary-background-color;
+    color: var.$primary-text-color;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: var.$primary-text-color;
+    transition: color, 250ms ease-in-out;
+
+    &:hover {
+        color: var.$accent-color;
+        cursor: pointer;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+.h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+    font-weight: 700;
+    line-height: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+    letter-spacing: -0.02775rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 1.4437rem + 4.507vw, 5.5rem);
+    font-weight: 700;
+    line-height: clamp(2.5rem, 1.4437rem + 4.507vw, 5.5rem);
+    letter-spacing: -0.15625rem;
+    text-wrap: balance;
+}
+
+h3 {
+    margin: 0;
+    font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+    font-weight: 700;
+    line-height: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+    letter-spacing: -0.09375rem;
+}
+
+.secondary-txt {
+    color: var.$secondry-text-color;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
