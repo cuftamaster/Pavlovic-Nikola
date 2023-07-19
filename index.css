@@ -446,6 +446,7 @@ footer .wraper {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 100%;
 }
 footer .wraper .row {
   width: 100%;
